@@ -195,7 +195,7 @@
     /* ### ARTICLE PAGES ### */
 
     /* Main title, body text and links */
-    .story-body__h1, .story-body p, .story-body .story-body__introduction, .story-body__link, .story-body__list-item a, .story-body__link, .story-body__link-external {
+    .story-body__h1, .story-body p, .story-body .story-body__introduction, .story-body__list-item, .story-body__link, .story-body__list-item a, .story-body__link, .story-body__link-external {
         color: #E0E0E0;
     }
     /* Article section */
