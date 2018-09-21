@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark BBC News
 @author James Tattersall
-@version 1.0.2
+@version 1.0.3
 @description Full dark theme for BBC News
 @namespace github.com/jamerst/userstyles
 @license MIT
@@ -65,7 +65,7 @@
     /* ### HOMEPAGE ### */
 
     /* Main page back */
-    #site-container, #page {
+    body, #site-container, #page {
         background-color: #212121;
     }
     /* Some hyperlinks */
