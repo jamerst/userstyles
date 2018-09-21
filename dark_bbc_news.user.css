@@ -128,6 +128,13 @@
     .ls-o-location--dark {
         color: #E0E0E0;
     }
+    /* Breaking news panel */
+    .nw-c-breaking-news-banner {
+        background-color: #424242;
+    }
+    .gel-pica {
+        color: #E0E0E0;
+    }
 
     /* ### SECTION PAGES ### */
 
