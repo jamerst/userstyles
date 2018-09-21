@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark BBC News
 @author James Tattersall
-@version 1.0.5
+@version 1.0.6
 @description Full dark theme for BBC News
 @namespace github.com/jamerst/userstyles
 @license MIT
@@ -274,6 +274,25 @@
     /* Remove background image - can't be easily changed to fit */
     .comments-button__count {
         background-image: unset;
+    }
+    /* Comments panels */
+    .cmts-header, .cmts-type-view, .cmt-narrow-view .cmts-top-sort-control, .cmts-ft {
+        background-color: #424242;
+    }
+    /* Selected comments view */
+    .cmts-type-view-li a.selected {
+        background-color: #616161;
+    }
+    /* Comment text colour */
+    .afs-cmts-outer, .afs-cmts-outer a {
+        color: #E0E0E0 !important;
+    }
+    /* Voting arrows */
+    .cmt-arrow {
+        -webkit-filter: invert(100%);
+    }
+    button.cmt-rateable:hover * {
+        -webkit-filter: unset;
     }
     /* Trust message */
     .trust-project {
