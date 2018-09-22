@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark BBC News
 @author James Tattersall
-@version 1.0.6
+@version 1.0.7
 @description Full dark theme for BBC News
 @namespace github.com/jamerst/userstyles
 @license MIT
@@ -217,6 +217,20 @@
 
         border-color: white;
     }
+    /* Side quote */
+    aside.quote {
+        color: #E0E0E0;
+        background-color: #424242;
+    }
+    .icon-quote {
+                filter: invert(100%);
+        -webkit-filter: invert(100%);
+    }
+    .quote-inner {
+        padding-left: .5em;
+
+        border: none;
+    }
     /* Secondary column backgrounds */
     .swift, .top-stories-promo, .features-and-analysis, .container-heron, .most-popular__title {
         color: white;
@@ -289,9 +303,11 @@
     }
     /* Voting arrows */
     .cmt-arrow {
+                filter: invert(100%);
         -webkit-filter: invert(100%);
     }
     button.cmt-rateable:hover * {
+                filter: unset;
         -webkit-filter: unset;
     }
     /* Trust message */
