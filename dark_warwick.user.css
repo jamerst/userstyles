@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark Warwick
 @author James Tattersall
-@version 1.0.0
+@version 1.0.1
 @description Full dark theme for University of Warwick Pages
 @namespace github.com/jamerst/userstyles
 @license MIT
@@ -103,6 +103,11 @@
     }
     .current-page-count {
         color: white;
+    }
+    pre {
+        background-color: #616161;
+        color: white;
+        border-color: #212121;
     }
 }
 
