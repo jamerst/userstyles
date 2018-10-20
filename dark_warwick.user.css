@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark Warwick
 @author James Tattersall
-@version 1.0.1
+@version 1.0.2
 @description Full dark theme for University of Warwick Pages
 @namespace github.com/jamerst/userstyles
 @license MIT
@@ -107,6 +107,25 @@
     pre {
         background-color: #616161;
         color: white;
+        border-color: #212121;
+    }
+    .well {
+        background-color: #616161;
+        border-color: #212121;
+    }
+    body:not(.edit) main ol.topics > li:hover, body:not(.edit) main ol.posts > li:hover {
+        background-color: #616161;
+    }
+    .pagination>.disabled>a, .pagination>li>span, .pagination>li>a {
+        background-color: #616161 !important;
+        border-color: #212121;
+
+    }
+    .pagination>li>span {
+        color: white;
+    }
+    .pagination>li>a:hover, .pagination>li>span:hover {
+        color: #9E9E9E;
         border-color: #212121;
     }
 }
