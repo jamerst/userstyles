@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark BBC News
 @author James Tattersall
-@version 1.0.7
+@version 1.0.8
 @description Full dark theme for BBC News
 @namespace github.com/jamerst/userstyles
 @license MIT
@@ -73,7 +73,7 @@
         color: #E0E0E0 !important;
     }
     /* Section headings */
-    .nw-c-slice-heading__title, .nw-c-slice-heading__action-text, .nw-c-nations-slice__button {
+    .nw-c-slice-heading__title, .nw-c-slice-heading__action-text, .nw-c-nations-slice__button, .nw-p-oat .nw-c-maxim-wrap {
         color: #E0E0E0;
         background-color: #212121;
     }
@@ -134,6 +134,10 @@
     }
     .gel-pica {
         color: #E0E0E0;
+    }
+    /* Live panel */      
+    .nw-p-default.lx-c-dynamic-promo {
+        background-color: #424242;
     }
 
     /* ### SECTION PAGES ### */
