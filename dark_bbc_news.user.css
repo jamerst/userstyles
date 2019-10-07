@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark BBC News
 @author James Tattersall
-@version 1.0.8
+@version 1.0.9
 @description Full dark theme for BBC News
 @namespace github.com/jamerst/userstyles
 @license MIT
@@ -51,7 +51,7 @@
         background-color: #BB1919 !important;
     }
     /* Secondary nav bar items */
-    .nw-c-nav__secondary-menuitem-container a, .navigation-wide-list--secondary .navigation-wide-list__link {
+    .nw-c-nav__secondary-menuitem-container a, .navigation-wide-list--secondary .navigation-wide-list__link, .nw-c-nav__wide-secondary__title span {
         color: #E0E0E0;
     }
     .nw-c-nav__secondary-menuitem-container a:hover {
@@ -68,9 +68,19 @@
     body, #site-container, #page {
         background-color: #212121;
     }
-    /* Some hyperlinks */
-    a:hover {
+    /* Hyperlink hover and focus */
+    a:hover, a:focus,
+    .most-popular-list-item__link:hover .most-popular-list-item__headline, .most-popular-list-item__link:focus .most-popular-list-item__headline,
+    .bold-image-promo:hover .bold-image-promo__title, .bold-image-promo:focus .bold-image-promo__title,
+    .top-stories-promo-story:hover .top-stories-promo-story__title, .top-stories-promo-story:focus .top-stories-promo-story__title,
+    .nw-o-link-split__anchor:hover .nw-o-link-split__text, .nw-o-link-split__anchor:focus .nw-o-link-split__text {
         color: #E0E0E0 !important;
+        text-decoration: underline;
+    }
+    /* Don't underline links in nav, fix main page underlines */
+    .site-brand a:hover, .site-brand a:focus,
+    .nw-o-link-split__anchor:hover .nw-o-link-split__text, .nw-o-link-split__anchor:focus .nw-o-link-split__text  {
+        text-decoration: none;
     }
     /* Section headings */
     .nw-c-slice-heading__title, .nw-c-slice-heading__action-text, .nw-c-nations-slice__button, .nw-p-oat .nw-c-maxim-wrap {
@@ -84,9 +94,10 @@
     /* Article description */
     .nw-c-promo-summary {
         color: #BDBDBD;
+        background-color: unset !important;
     }
     /* Timestamp, category, comments and related */
-    .gs-o-bullet__text, .nw-o-link, .nw-c-comment span, .nw-o-link-split__text {
+    .gs-o-bullet__text, .nw-o-link, .nw-c-comment span, .nw-o-link-split__text, #topos-component .nw-c-related-items__text{
         color: #9E9E9E;
     }
     .nw-o-link:visited {
@@ -99,11 +110,15 @@
     /* Video icon */
     .nw-p-default .gs-c-media-indicator {
         color: #BDBDBD;
-        background-color: transparent;;
+        background-color: #424242;;
     }
     /* Watch and listen live panels */
     .nw-c-watch-listen__body {
         background-color: #424242;
+    }
+    /* Listen live header */
+    .nw-c-watch-listen__title--listen {
+        background-color: #636363;
     }
     /* Most read */
     .gs-o-media__body .nw-o-link, .vxp-mostpop__list-item-headline {
@@ -181,10 +196,10 @@
         background-color: #616161;
     }
     /* Our experts */
-    .correspondent-promo__title, .correspondent-promo__headline {
+    .correspondent-promo__title, .correspondent-promo__headline, .nw-o-link-split__text {
         color: #E0E0E0;
     }
-    .correspondent-promo__latest-story {
+    .correspondent-promo__latest-story, .nw-c-correspondents-promo {
         background-color: #424242;
     }
     .correspondent-promo__article-summary {
@@ -332,12 +347,20 @@
     .scrollmation-two-column, .section-text {
         background-color: #424242;
     }
+    /* Backgrounds */
+    .Theme-Section-Light, .Theme-Section-Light .Theme-Layer-BodyText {
+        background-color: #212121;
+        color: #E0E0E0
+    }
     /* Article contents */
     .story .section, .story .quote-block blockquote p {
         color: #E0E0E0;
     }
     .story .main-column .caption {
         color: #BDBDBD !important;
+    }
+    .Theme-Layer-BodyText-Blockquote {
+        color: #BDBDBD;
     }
     /* Quote icon */
     blockquote::before {
@@ -385,6 +408,19 @@
     /* Share buttons */
     .extracted__channel-link, .vxp-share__share-button {
         background-color: #424242;
+    }
+    
+    /* ### LATEST UPDATES ### */
+    #latest-updates, .gs-t-news .lx-stream-post__header {
+        color: #E0E0E0;
+    }
+    .gs-t-news .lx-stream-post__meta-time, .gs-t-news .lx-stream-post-body {
+        color: #BDBDBD;
+    }
+    .gs-t-news .lx-stream-show-more__button, .gs-t-news .lx-stream-post-body > a {
+        background-color: #636363;
+        color: #E0E0E0;
+        border: unset;
     }
 
     /* ### MISC ### */
