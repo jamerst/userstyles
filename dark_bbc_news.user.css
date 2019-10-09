@@ -11,6 +11,19 @@
 @updateURL https://github.com/jamerst/userstyles/raw/master/dark_bbc_news.user.css
 ==/UserStyle== */
 
+/* ==UserStyle==
+@name Dark BBC News
+@author James Tattersall
+@version 1.1.0
+@description Full dark theme for BBC News
+@namespace github.com/jamerst/userstyles
+@license MIT
+
+@homepageURL https://github.com/jamerst/userstyles
+@supportURL https://github.com/jamerst/userstyles/issues
+@updateURL https://github.com/jamerst/userstyles/raw/master/dark_bbc_news.user.css
+==/UserStyle== */
+
 @-moz-document url-prefix("https://www.bbc.co.uk/news"), url-prefix("https://www.bbc.com/news") {
     /* ### SITE HEADERS ### */
 
@@ -19,12 +32,25 @@
         border-color: black;
         background: #8B1414;
     }
+    /* Notification triangle colour */
+    #notification-link .notification-link--triangle:first-of-type {
+        border-left-color: white;
+    }
+    
+    #notification-link .notification-link--triangle:last-of-type {
+        border-left-color: #74EBEB;
+    }
     /* Nav items */
     .orb-nav-pri a, .orb-nav-pri.orb-nav-active .orb-nav-sec a, .orb-nav-pri.orb-nav-active .orb-nav-sec h2, .orb-nav-pri.orb-nav-active a, .se-searchbox-app .se-episode-suggestion__title {
         color: #E0E0E0;
     }
     /* Nav item borders */
-    .orb-nav-pri .orb-nav-id, .orb-nav-links li, .orb-nav-links ul {
+    .orb-nav-pri .orb-nav-id,
+    .orb-nav-links li,
+    .orb-nav-links ul,
+    .orb-nav-pri.orb-nav-active .orb-nav-links li,
+    .orb-nav-pri.orb-nav-active .orb-nav-links ul,
+    .orb-nav-pri.orb-nav-active .orb-nav-id {
         border-color: black;
     }
     /* Search fields */
@@ -61,6 +87,24 @@
     .nw-c-nav__secondary-menuitem-container a:visited {
         color: #E0E0E0;
     }
+    /* Invert BBC logo and top bar elements */
+    .orb-nav-section:first-child a,
+    #idcta-statusbar,
+    #notification-link,
+    .new-notifications,
+    .orb-icon-arrow {
+        filter: invert(1);
+    }
+    /* Fix stuff also inverted by invert selector */
+    #orb-nav-links a {
+        filter: unset;
+    }
+    #notification-link {
+        border-color: white;
+    }
+    #orb-header.orb-nav-pri .orb-nav-id #notification-link:hover {
+        border-bottom-color: #FF9210;
+    }
 
     /* ### HOMEPAGE ### */
 
@@ -73,13 +117,22 @@
     .most-popular-list-item__link:hover .most-popular-list-item__headline, .most-popular-list-item__link:focus .most-popular-list-item__headline,
     .bold-image-promo:hover .bold-image-promo__title, .bold-image-promo:focus .bold-image-promo__title,
     .top-stories-promo-story:hover .top-stories-promo-story__title, .top-stories-promo-story:focus .top-stories-promo-story__title,
-    .nw-o-link-split__anchor:hover .nw-o-link-split__text, .nw-o-link-split__anchor:focus .nw-o-link-split__text {
+    .nw-o-link-split__anchor:hover .nw-o-link-split__text, .nw-o-link-split__anchor:focus .nw-o-link-split__text,
+    .story-body__link-email-text:hover,
+    .story-body__link-email:hover .icon,
+    a:hover .cta,
+    .title-link:hover .title-link__title-text,
+    .vxp-mostpop__list-item:hover .vxp-mostpop__list-item-headline,
+    .vxp-recommended__link:hover .vxp-recommended__headline {
         color: #E0E0E0 !important;
         text-decoration: underline;
     }
-    /* Don't underline links in nav, fix main page underlines */
+    /* Don't underline links in nav or tags, fix main page underlines */
     .site-brand a:hover, .site-brand a:focus,
-    .nw-o-link-split__anchor:hover .nw-o-link-split__text, .nw-o-link-split__anchor:focus .nw-o-link-split__text  {
+    #orb-header a:hover, #orb-header a:focus,
+    .nw-o-link-split__anchor:hover .nw-o-link-split__text,
+    .nw-o-link-split__anchor:focus .nw-o-link-split__text,
+    .tags-list__tags a:hover {
         text-decoration: none;
     }
     /* Section headings */
@@ -110,7 +163,14 @@
     /* Video icon */
     .nw-p-default .gs-c-media-indicator {
         color: #BDBDBD;
-        background-color: #424242;;
+        background-color: #424242;
+    }
+    .gs-c-media-indicator {
+        background-color: transparent !important;
+    }
+    .features-and-analysis__story .responsive-image__label {
+        color: #BDBDBD;
+        background-color: #636363;
     }
     /* Watch and listen live panels */
     .nw-c-watch-listen__body {
@@ -221,7 +281,17 @@
     /* ### ARTICLE PAGES ### */
 
     /* Main title, body text and links */
-    .story-body__h1, .story-body p, .story-body .story-body__introduction, .story-body__list-item, .story-body__link, .story-body__list-item a, .story-body__link, .story-body__link-external {
+    .story-body__h1,
+    .story-body p,
+    .story-body .story-body__introduction,
+    .story-body__list-item,
+    .story-body__link,
+    .story-body__list-item a,
+    .story-body__link,
+    .story-body__link-external,
+    .story-body p strong,
+    .story-body__link-email-text,
+    .story-body strong {
         color: #E0E0E0;
     }
     /* Article section */
@@ -268,8 +338,17 @@
         color: #BDBDBD;
     }
     /* Related topics */
-    .story-body__crosshead, .tags-list__tags a {
+    .story-body__crosshead {
         color: #E0E0E0;
+    }
+    /* Tags */
+     .tags-list__tags a {
+        color: #E0E0E0;
+        background-color: #424242;
+        border-color: #636363;
+    }
+    .tags-list__tags a:hover {
+        background-color: #636363;
     }
     /* Share title and more on this story */
     .share__title, .group__title, a .cta, .group-title__link, .from-other-news-sites__title {
@@ -334,6 +413,15 @@
         background-color: #424242;
     }
     .trust-project__link {
+        color: #E0E0E0;
+    }
+    /* Contact */
+    .contact-form__input, .contact-form__textarea, .contact-form__input--submit {
+        background-color: #424242;
+        border-color: #636363;
+        color: #E0E0E0;
+    }
+    .contact-form__label {
         color: #E0E0E0;
     }
 
@@ -414,8 +502,11 @@
     #latest-updates, .gs-t-news .lx-stream-post__header {
         color: #E0E0E0;
     }
-    .gs-t-news .lx-stream-post__meta-time, .gs-t-news .lx-stream-post-body {
+    .gs-t-news .lx-stream-post__meta-time, .gs-t-news .lx-stream-post-body, .gs-t-news .lx-stream-post__contributor-name {
         color: #BDBDBD;
+    }
+    .gs-t-news .lx-stream-post {
+        color: #9E9E9E;
     }
     .gs-t-news .lx-stream-show-more__button, .gs-t-news .lx-stream-post-body > a {
         background-color: #636363;
