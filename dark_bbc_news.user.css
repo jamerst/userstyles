@@ -1,20 +1,7 @@
 /* ==UserStyle==
 @name Dark BBC News
 @author James Tattersall
-@version 1.1.1
-@description Full dark theme for BBC News
-@namespace github.com/jamerst/userstyles
-@license MIT
-
-@homepageURL https://github.com/jamerst/userstyles
-@supportURL https://github.com/jamerst/userstyles/issues
-@updateURL https://github.com/jamerst/userstyles/raw/master/dark_bbc_news.user.css
-==/UserStyle== */
-
-/* ==UserStyle==
-@name Dark BBC News
-@author James Tattersall
-@version 1.1.0
+@version 2.0.0
 @description Full dark theme for BBC News
 @namespace github.com/jamerst/userstyles
 @license MIT
@@ -28,7 +15,7 @@
     /* ### SITE HEADERS ### */
 
     /* Top bar and search window */
-    .orb-nav-pri, .orb-nav-pri.orb-nav-active {
+    .orb-nav-pri, .orb-nav-pri.orb-nav-active, nav.css-wlr68w-GlobalNavigation {
         border-color: black;
         background: #8B1414;
     }
@@ -41,7 +28,8 @@
         border-left-color: #74EBEB;
     }
     /* Nav items */
-    .orb-nav-pri a, .orb-nav-pri.orb-nav-active .orb-nav-sec a, .orb-nav-pri.orb-nav-active .orb-nav-sec h2, .orb-nav-pri.orb-nav-active a, .se-searchbox-app .se-episode-suggestion__title {
+    .orb-nav-pri a, .orb-nav-pri.orb-nav-active .orb-nav-sec a, .orb-nav-pri.orb-nav-active .orb-nav-sec h2, .orb-nav-pri.orb-nav-active a, .se-searchbox-app .se-episode-suggestion__title,
+    a.css-25jq3o-NavigationLink-LogoLink, .css-19ys5ko-GlobalNavigationLinkList-En, .css-xx6wca-GlobalNavigationSide {
         color: #E0E0E0;
     }
     /* Nav item borders */
@@ -50,7 +38,10 @@
     .orb-nav-links ul,
     .orb-nav-pri.orb-nav-active .orb-nav-links li,
     .orb-nav-pri.orb-nav-active .orb-nav-links ul,
-    .orb-nav-pri.orb-nav-active .orb-nav-id {
+    .orb-nav-pri.orb-nav-active .orb-nav-id,
+    .css-1m0vj5n-GlobalNavigationItem,
+    .css-19ys5ko-GlobalNavigationLinkList-En li,
+    .css-xx6wca-GlobalNavigationSide {
         border-color: black;
     }
     /* Search fields */
@@ -68,7 +59,8 @@
         -webkit-filter: invert(74%);
     }
     /* Secondary nav bar back */
-    .gs-u-display-none.gs-u-display-block\@m, .secondary-navigation {
+    .gs-u-display-none.gs-u-display-block\@m, .secondary-navigation,
+    .css-9pzks4-MenuContainer-SecondaryNavBarContainer, .css-vpzafb-MenuListContainer {
         background-color: #424242;
     }
     /* Fix main header */
@@ -81,7 +73,9 @@
     .navigation-wide-list--secondary .navigation-wide-list__link,
     .nw-c-nav__wide-secondary__title span,
     .nw-c-nav__wide-section__title div,
-    .vxp-secondary-nav--wide span {
+    .vxp-secondary-nav--wide span,
+    .css-1qqcsab-StyledLink,
+    .css-1ey20yi-StyledLink {
         color: #E0E0E0;
     }
     .nw-c-nav__secondary-menuitem-container a:hover {
@@ -309,17 +303,22 @@
     .story-body__link-external,
     .story-body p strong,
     .story-body__link-email-text,
-    .story-body strong {
+    .story-body strong,
+    .css-1c1994u-StyledHeading,
+    .css-83cqas-RichTextContainer {
         color: #E0E0E0;
     }
     /* Article section */
-    .index-title__container a:link {
+    .index-title__container a:link,
+    .css-yidnqd-InlineLink:link {
         color: #E0E0E0;
     }
-    .index-title__container a:visited {
-        color: #E0E0E0;
+    .index-title__container a:visited,
+    .css-yidnqd-InlineLink:visited {
+        color: #9E9E9E;
     }
-    .index-title__container:hover {
+    .index-title__container:hover,
+    .css-yidnqd-InlineLink:hover {
         transition: .3s;
 
         border-color: white;
@@ -343,6 +342,20 @@
         color: white;
         background-color: #424242;
     }
+    /* New layout secondary column */
+    .css-mbfif2-Promo {
+        background-color: inherit;
+        color: white
+    }
+    .css-5h2rh7-StyledHeading {
+        color: white
+    }
+    .css-6a7qz2-PromoHeadline {
+        color: #E0E0E0
+    }
+    .css-11c8au8-MetadataStrip {
+        color: #BDBDBD
+    }
     /* Secondary column headings and main items */
     .title-link__title-text, .top-stories-promo__title, .top-stories-promo-story__title, .features-and-analysis__title, .bold-image-promo__title, .group-title, .most-popular-list-item__headline {
         color: #E0E0E0;
@@ -363,7 +376,7 @@
         color: #BDBDBD;
     }
     /* Related topics */
-    .story-body__crosshead {
+    .story-body__crosshead, .css-1sd1v8r-StyledLink {
         color: #E0E0E0;
     }
     /* Tags */
