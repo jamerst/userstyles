@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name Dark BBC News
 @author James Tattersall
-@version 2.0.1
+@version 2.0.2
 @description Full dark theme for BBC News
 @namespace github.com/jamerst/userstyles
 @license MIT
@@ -90,6 +90,11 @@
     }
     .nw-c-nav__secondary-menuitem-container a:hover {
         color: #E0E0E0;
+    }
+    /* Remove underline on nav element hover*/
+    a.ssrcss-d0r61p-StyledLink:hover, a.ssrcss-kjfi6f-StyledLink:hover, a.ssrcss-6v54e1-StyledLink:hover, a.ssrcss-1w98nsi-StyledToggle:hover {
+        text-decoration: none;
+        color: #fff !important;
     }
     /* Fix colour when been visited */
     .nw-c-nav__secondary-menuitem-container a:visited {
@@ -356,17 +361,17 @@
     }
     /* Secondary column backgrounds */
     .swift, .top-stories-promo, .features-and-analysis, .container-heron, .most-popular__title {
-        color: white;
+        color: #e0e0e0;
         background-color: #424242;
     }
     /* New layout secondary column */
     .css-mbfif2-Promo {
         background-color: inherit;
-        color: white
+        color: #e0e0e0
     }
     .css-5h2rh7-StyledHeading,
     .ssrcss-1nrzmoz-StyledHeading {
-        color: white
+        color: #e0e0e0
     }
     .css-6a7qz2-PromoHeadline,
     .ssrcss-13k1mrq-PromoHeadline {
@@ -374,11 +379,14 @@
     }
     .css-11c8au8-MetadataStrip,
     .ssrcss-1c3ha30-MetadataStrip,
-    .ssrcss-1c71b3r-Promo {
+    .ssrcss-1c71b3r-Promo,
+    .ssrcss-i8gi56-Promo
+    {
         color: #BDBDBD
     }
     /* Secondary column headings and main items */
-    .title-link__title-text, .top-stories-promo__title, .top-stories-promo-story__title, .features-and-analysis__title, .bold-image-promo__title, .group-title, .most-popular-list-item__headline {
+    .title-link__title-text, .top-stories-promo__title, .top-stories-promo-story__title, .features-and-analysis__title, .bold-image-promo__title, .group-title, .most-popular-list-item__headline,
+    .ssrcss-1fn5dxy-PromoLink:link, .ssrcss-1fn5dxy-PromoLink:link:hover .e1f5wbog1 {
         color: #E0E0E0;
     }
     /* Visited secondary column items */
@@ -408,6 +416,9 @@
     }
     .tags-list__tags a:hover {
         background-color: #636363;
+    }
+    .ssrcss-1yno9a1-StyledLink {
+        color: #e0e0e0;
     }
     /* Share title and more on this story */
     .share__title, .group__title, a .cta, .group-title__link, .from-other-news-sites__title {
@@ -547,7 +558,8 @@
     /* ### VIDEOS ### */
 
     /* Video title */
-    .vxp-media__headline {
+    .vxp-media__headline,
+    .ssrcss-ypmsa8-StyledHeading {
         color: #E0E0E0;
     }
     /* Description */
